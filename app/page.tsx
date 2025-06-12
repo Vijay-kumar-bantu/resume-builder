@@ -4,7 +4,7 @@ import JobForm from "@/components/JobForm";
 import Layout from "@/components/Layout";
 import ResponseDisplay from "@/components/ResponseDisplay";
 import { ThemeProvider } from "@/context/ThemeContext";
-import { getJobResponse } from "@/utils/mockApi";
+import { getJobResponse } from "@/utils/resumeApi";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -19,7 +19,6 @@ export default function Home() {
 			setResponse(result);
 		} catch (error) {
 			console.error("Error getting response:", error);
-			// Handle error state here
 		} finally {
 			setIsLoading(false);
 		}

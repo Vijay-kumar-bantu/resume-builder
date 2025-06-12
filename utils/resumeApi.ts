@@ -3,8 +3,7 @@
 export const getJobResponse = async (
 	jobDescription: string
 ): Promise<string> => {
-	// Simulate API call delay
-	const res = await fetch("http://localhost:3001/resume", {
+	const res = await fetch("/api/resume", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
