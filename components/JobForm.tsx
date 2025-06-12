@@ -36,19 +36,12 @@ const JobForm: React.FC<JobFormProps> = ({ onSubmit, isLoading }) => {
 			</div>
 
 			<form onSubmit={handleSubmit} className="flex-1 flex flex-col">
-				{/* <label
-					htmlFor="jobDescription"
-					className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-				>
-					Job Description
-				</label> */}
-
 				<textarea
 					id="jobDescription"
 					value={jobDescription}
 					onChange={(e) => setJobDescription(e.target.value)}
 					placeholder="E.g., Looking for a Full Stack Developer with 3+ years of experience in React and Node.js..."
-					className="flex-1 p-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 w-full resize-none transition-all mb-4"
+					className="flex-1 p-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 w-full resize-none transition-all mb-4 placeholder:text-gray-600"
 					required
 				/>
 
