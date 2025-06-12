@@ -72,7 +72,7 @@ const ResponseDisplay: React.FC<ResponseDisplayProps> = ({
 									></path>
 								</svg>
 								<p className="text-gray-600 dark:text-gray-300">
-									Generating your professional response...
+									Generating your professional Resume...
 								</p>
 							</div>
 						</motion.div>
