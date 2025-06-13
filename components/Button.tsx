@@ -53,7 +53,7 @@ const Button: React.FC<ButtonProps> = ({
 		: "";
 
 	return (
-		//@ts-expect-error
+		//@ts-expect-error error from button
 		<motion.button
 			whileTap={{ scale: 0.98 }}
 			className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${disabledStyles} ${iconSpacing} ${className}`}

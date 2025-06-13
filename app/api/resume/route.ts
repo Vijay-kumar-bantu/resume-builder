@@ -13,6 +13,7 @@ export async function POST(req: NextRequest) {
 		const result = await resumeGenerator(jobDescription);
 		return NextResponse.json({ response: result });
 	} catch (error) {
+		console.log("Error generating resume:", error);
 		return NextResponse.json(
 			{ response: "Failed to generate resume" },
 			{ status: 500 }
@@ -20,6 +21,6 @@ export async function POST(req: NextRequest) {
 	}
 }
 
-export async function GET(req: NextRequest) {
+export async function GET() {
 	return NextResponse.json({ message: "Resume API is running" });
 }
