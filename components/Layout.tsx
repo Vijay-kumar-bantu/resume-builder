@@ -51,9 +51,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 			{/* Footer */}
 			<footer className="py-6 px-4 sm:px-6">
 				<div className="max-w-7xl mx-auto text-center text-sm text-gray-500 dark:text-gray-400">
-					<p>
-						© {new Date().getFullYear()} JobDescAI. Created with StackBlitz.
-					</p>
+					<p>© {new Date().getFullYear()} ResumeDescAI. Created with ❤️.</p>
 				</div>
 			</footer>
 		</div>
