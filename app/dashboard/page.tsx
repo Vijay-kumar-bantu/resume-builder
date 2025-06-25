@@ -3,9 +3,10 @@
 import JobForm from "@/components/JobForm";
 import Layout from "@/components/Layout";
 import ResponseDisplay from "@/components/ResponseDisplay";
-import { ThemeProvider } from "@/context/ThemeContext";
+import { resume_link } from "@/data/constants";
 import { getJobResponse } from "@/utils/resumeApi";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Home() {
@@ -36,9 +37,18 @@ export default function Home() {
 					<h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
 						Resume Generator
 					</h1>
-					<p className="text-gray-600 dark:text-gray-300 mb-6">
+					<p className="text-gray-600 dark:text-gray-300">
 						Latex syntax of Professional resume will be generated here, use
 						tools like overleaf to generate PDF
+					</p>
+					<p className="text-gray-600 dark:text-gray-300">
+						check the resume{" "}
+						<Link
+							href={resume_link}
+							className="underline underline-offset-2 text-blue-600 dark:text-blue-400"
+						>
+							here
+						</Link>
 					</p>
 				</div>
 
