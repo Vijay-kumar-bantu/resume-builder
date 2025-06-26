@@ -1,0 +1,96 @@
+{
+	"name": "Vijay Kumar Bantu",
+	"email": "vijaykumar.bantu2403@gmail.com",
+	"portfolio": "https://main-portfolio-five-alpha.vercel.app/",
+	"linkedin": "http://www.linkedin.com/in/vijay-kumar-bantu",
+	"github": "https://github.com/Vijay-kumar-bantu",
+	"skills": [
+		"Java",
+		"JavaScript",
+		"TypeScript",
+		"Next.js",
+		"React.js",
+		"Redux",
+		"Tailwind CSS",
+		"Material UI",
+		"Node.js",
+		"Prisma",
+		"Express.js",
+		"PostgreSQL",
+		"MongoDB",
+		"Git",
+		"VS Code",
+		"Docker",
+		"Sanity CMS",
+		"Turborepo",
+		"Figma"
+	],
+	"experience": [
+		{
+			"title": "Junior Full Stack Developer",
+			"company": "Tata Consultancy Services (TCS)",
+			"location": "Hyderabad",
+			"start_date": "Oct 2021",
+			"end_date": "Dec 2023",
+			"responsibilities": [
+				"Contributed to an internal website using React.js and Redux, integrating a MongoDB backend with Node.js and Express.js, improving load time by 40% and user satisfaction by 20%.",
+				"Streamlined backend functionality, achieving faster API responses and reducing server-side errors by 30%.",
+				"Utilized OOP, data structures, and algorithm optimization to reduce server response times by 20–30%."
+			]
+		},
+		{
+			"title": "Full Stack Developer",
+			"company": "Tata Consultancy Services (TCS)",
+			"location": "Hyderabad",
+			"start_date": "Dec 2023",
+			"end_date": "Present",
+			"responsibilities": [
+				"Developed frontend for a retail website using Next.js and Redux with SSR, improving site performance by 30%.",
+				"Integrated Sanity CMS to streamline content management, boosting update frequency by 40%.",
+				"Implemented dynamic routing and data fetching in Next.js, enhancing responsiveness and user engagement by 35%.",
+				"Optimized SEO via SSR, metadata, and keyword integration, increasing organic traffic by 15%.",
+				"Built a scalable backend with Node.js, Express.js, and MongoDB, improving data retrieval by 25%.",
+				"Engaged in Agile development practices including sprint planning, stand-ups, and code reviews."
+			]
+		}
+	],
+	"projects": [
+		{
+			"name": "Turbo Chat App",
+			"description": "Real-time chat application with secure authentication and ephemeral message handling.",
+			"technologies": [
+				"React.js",
+				"TailwindCSS",
+				"Node.js",
+				"Express.js",
+				"Turborepo",
+				"Docker"
+			],
+			"features": [
+				"WebSocket-based real-time messaging",
+				"Ephemeral message expiration post-logout",
+				"Monorepo architecture with scalable Dockerized setup"
+			],
+			"code_url": "https://github.com/Vijay-kumar-bantu/turbo-chat-app"
+		},
+		{
+			"name": "Resume Builder",
+			"description": "A Resume Builder application that allows users to create in Latex format with high ATS score according to the JOB description",
+			"technologies": ["Next js", "TailwindCSS", "Gemini AI", "Docker"],
+			"features": [
+				"Making ATS friendly resumes for the user according the JOB description"
+			],
+			"code_url": "https://github.com/Vijay-kumar-bantu/resume-builder"
+		}
+	],
+	"education": [
+		{
+			"degree": "Bachelor of Science(B.Sc)[MPCS]",
+			"description": "Major in Computer Sceience",
+			"university": "Osmania University",
+			"location": "Hyderabad",
+			"start_year": 2018,
+			"end_year": 2021
+		}
+	]
+}
