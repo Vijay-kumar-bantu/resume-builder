@@ -18,9 +18,10 @@ import Button from "../components/Button";
 import ThemeToggle from "../components/ThemeToggle";
 import { redirect } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
-import AuthModal from "@/components/AuthModal";
+// import AuthModal from "@/components/AuthModal";
 
 const LandingPage: React.FC = () => {
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 	const { isAuthenticated } = useAuth();
 	const navigate = redirect;
@@ -405,10 +406,10 @@ const LandingPage: React.FC = () => {
 				<div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-500/20 to-transparent" />
 			</footer>
 
-			<AuthModal
+			{/* <AuthModal
 				isOpen={isAuthModalOpen}
 				onClose={() => setIsAuthModalOpen(false)}
-			/>
+			/> */}
 		</div>
 	);
 };
