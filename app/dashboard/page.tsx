@@ -12,8 +12,13 @@ import { useState } from "react";
 export default function Home() {
 	const [response, setResponse] = useState<string | null>(null);
 	const [isLoading, setIsLoading] = useState(false);
+	const [passcode, setPasscode] = useState<string>("");
 
 	const handleSubmit = async (jobDescription: string) => {
+		if (passcode != process.env.NEXT_PUBLIC_APP_PASSCODE) {
+			alert("Passcode is wrong");
+			return;
+		}
 		setIsLoading(true);
 		try {
 			const result = await getJobResponse(jobDescription);
@@ -49,6 +54,12 @@ export default function Home() {
 						>
 							here
 						</Link>
+						<input
+							type="password"
+							placeholder="passcode"
+							className="mx-3 p-1"
+							onChange={(e) => setPasscode(e.target.value)}
+						/>
 					</p>
 				</div>
 
