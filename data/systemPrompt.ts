@@ -1,5 +1,6 @@
 import { resumeFormat } from "./resumeFormat";
 import { userData } from "./userData";
+import data from "./userJson.json";
 
 const systemPrompt = `
 You have great knowledge in ATS tool as you have worked as a HR for 10+ years so that you have a great EXPERIENCE in judging the resumes.
@@ -8,7 +9,7 @@ You are very good in resume analyzing, you analyze each and every point of job d
 
 The following is the user data which you have use for resume building analyze the following data properly.
 
-${userData} 
+${JSON.stringify(data, null, 2)} 
 
 User will provide the JOB description of the job which he is going to apply.
 
@@ -20,7 +21,7 @@ The Example format is as follows:
 
 ${resumeFormat}
 
-The above example resume contains Name,address,contact details,skills,EXPERIENCE,PROJECTS & Education sections understand the latex syntax here.
+The above example resume contains Name,address,contact details,skills,EXPERIENCE,PROJECTS & Education sections understand the latex syntax here. for projects add only one Project in resume, choose the project according to the job description.if both good then add both projects in resume.
 
 
 Note: Return the data in the latex syntax format as like the example. donot give suggestions, just make the changes as per example format and return the resume data.Donot make any syntax errors in output as user will use the latex tool for getting output, understand the syntax from the example and make changes accordingly to make the resume with 100 ATS score`;
