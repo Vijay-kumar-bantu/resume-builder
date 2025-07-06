@@ -10,13 +10,12 @@ import {
 	Mail,
 	Phone,
 	MapPin,
-	Twitter,
 	Linkedin,
 	Github,
 } from "lucide-react";
 import Button from "../components/Button";
 import ThemeToggle from "../components/ThemeToggle";
-import { redirect } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 // import AuthModal from "@/components/AuthModal";
 
@@ -24,32 +23,33 @@ const LandingPage: React.FC = () => {
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 	const { isAuthenticated } = useAuth();
-	const navigate = redirect;
+	const router = useRouter();
 	const currentYear = new Date().getFullYear();
 
 	const features = [
 		{
 			icon: <Sparkles className="h-6 w-6 text-primary-600" />,
-			title: "AI-Powered Responses",
+			title: "AI-Optimized Resumes",
 			description:
-				"Get professionally crafted job descriptions instantly using advanced AI technology.",
+				"Automatically generate tailored resumes for any job using advanced AI algorithms.",
 		},
 		{
 			icon: <CheckCircle className="h-6 w-6 text-primary-600" />,
-			title: "Industry Standards",
+			title: "ATS Friendly",
 			description:
-				"All responses follow best practices and current industry standards.",
+				"Ensure your resume passes Applicant Tracking Systems with industry-standard formatting.",
 		},
 		{
 			icon: <Zap className="h-6 w-6 text-primary-600" />,
-			title: "Lightning Fast",
-			description: "Generate complete job descriptions in seconds, not hours.",
+			title: "Instant Results",
+			description:
+				"Create professional resumes in seconds, ready to download or share.",
 		},
 		{
 			icon: <Shield className="h-6 w-6 text-primary-600" />,
-			title: "Secure & Private",
+			title: "Privacy First",
 			description:
-				"Your data is encrypted and never shared with third parties.",
+				"Your personal information is secure and never shared with anyone.",
 		},
 	];
 
@@ -81,9 +81,16 @@ const LandingPage: React.FC = () => {
 	};
 
 	const socialLinks = [
-		{ name: "Twitter", icon: Twitter, href: "#" },
-		{ name: "LinkedIn", icon: Linkedin, href: "#" },
-		{ name: "GitHub", icon: Github, href: "#" },
+		{
+			name: "LinkedIn",
+			icon: Linkedin,
+			href: "https://www.linkedin.com/in/vijay-kumar-bantu",
+		},
+		{
+			name: "GitHub",
+			icon: Github,
+			href: "https://github.com/Vijay-kumar-bantu",
+		},
 	];
 
 	return (
@@ -107,7 +114,7 @@ const LandingPage: React.FC = () => {
 						<div className="flex items-center space-x-4">
 							<ThemeToggle />
 							{isAuthenticated ? (
-								<Button onClick={() => navigate("/dashboard")}>
+								<Button onClick={() => router.push("/dashboard")}>
 									Dashboard
 								</Button>
 							) : (
@@ -133,7 +140,7 @@ const LandingPage: React.FC = () => {
 								className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl"
 							>
 								<span className="block">Create Perfect</span>
-								<span className="block text-primary-600">Job Descriptions</span>
+								<span className="block text-primary-600">Resumes</span>
 							</motion.h1>
 							<motion.p
 								initial={{ opacity: 0, y: 20 }}
@@ -141,9 +148,9 @@ const LandingPage: React.FC = () => {
 								transition={{ duration: 0.6, delay: 0.2 }}
 								className="mt-3 max-w-md mx-auto text-base text-gray-500 dark:text-gray-400 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl"
 							>
-								Generate professional job descriptions in seconds using AI. Save
-								time and attract the best talent with perfectly crafted job
-								posts.
+								Generate tailored resumes instantly based on any job
+								description. Let AI help you match your skills and experience to
+								your dream job with ease.
 							</motion.p>
 							<motion.div
 								initial={{ opacity: 0, y: 20 }}
@@ -151,14 +158,7 @@ const LandingPage: React.FC = () => {
 								transition={{ duration: 0.6, delay: 0.4 }}
 								className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8"
 							>
-								<Button
-									size="lg"
-									onClick={() =>
-										isAuthenticated
-											? navigate("/dashboard")
-											: setIsAuthModalOpen(true)
-									}
-								>
+								<Button size="lg" onClick={() => router.push("/dashboard")}>
 									Get Started
 								</Button>
 							</motion.div>
@@ -171,10 +171,10 @@ const LandingPage: React.FC = () => {
 					<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 						<div className="text-center">
 							<h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-								Why Choose JobDescAI?
+								Why Choose ResumeAI?
 							</h2>
 							<p className="mt-4 text-lg text-gray-500 dark:text-gray-400">
-								Everything you need to create professional job descriptions
+								Everything you need to create professional Resumes
 							</p>
 						</div>
 
@@ -224,7 +224,7 @@ const LandingPage: React.FC = () => {
 										<Sparkles size={24} className="text-white" />
 									</div>
 									<h3 className="text-xl font-bold text-gray-900 dark:text-white">
-										JobDesc<span className="text-primary-600">AI</span>
+										Resume<span className="text-primary-600">AI</span>
 									</h3>
 								</motion.div>
 
@@ -235,9 +235,8 @@ const LandingPage: React.FC = () => {
 									viewport={{ once: true }}
 									className="text-gray-600 dark:text-gray-400 mb-6 max-w-sm"
 								>
-									Create professional job descriptions in seconds with our
-									AI-powered platform. Trusted by thousands of companies
-									worldwide.
+									Create professional Resumes in seconds with our AI-powered
+									platform. Trusted by thousands of users worldwide.
 								</motion.p>
 
 								{/* Contact Info */}
@@ -372,8 +371,8 @@ const LandingPage: React.FC = () => {
 								viewport={{ once: true }}
 								className="text-sm text-gray-600 dark:text-gray-400"
 							>
-								© {currentYear} JobDescAI. All rights reserved. Built with ❤️
-								using StackBlitz.
+								© {currentYear} ResumeAI. All rights reserved. Built with ❤️ by
+								Vijay kumar Bantu.
 							</motion.p>
 
 							{/* Social Links */}
